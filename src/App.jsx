@@ -31,7 +31,7 @@ function App() {
 
   const addToCart = (i) => {
     const product = products[i];
-    const isInCart = addedProducts.some((p) => p.name = product.name)
+    const isInCart = addedProducts.some((p) => p.name === product.name)
     if (!isInCart) {
       setAddedProducts([...addedProducts, { ...product, quantity: 1 }])
     } else { return }
